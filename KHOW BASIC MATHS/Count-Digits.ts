@@ -1,7 +1,7 @@
-const n = 2446;
-let count = 0;
+const n: number = 2446;
+let count: number = 0;
 
-const countTheDigits = (n) => {
+const countTheDigits = (n: number) => {
   // time complexity : O(log n)
   // space complexity : O(1)
 
@@ -10,15 +10,14 @@ const countTheDigits = (n) => {
   }
 
   while (n !== 0) {
-    let lastDigit = n % 10;
     count++;
-    n = parseInt(n / 10);
+    n = Math.floor(n / 10);
   }
 
   return count;
 };
 
-const countDigits2 = (n) => {
+const countTheDigits2 = (n: number) => {
   // time complexity : O(d)
   // space complexity : O(1)
 
@@ -26,5 +25,5 @@ const countDigits2 = (n) => {
   return num.length;
 };
 
-const ans = countTheDigits(11112);
+const ans = countTheDigits2(11112);
 console.log(ans);
